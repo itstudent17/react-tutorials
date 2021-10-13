@@ -1,9 +1,19 @@
+import { Link } from "react-router-dom";
+
+const navStyle = {
+  color: "white",
+};
+
 const Navigation = () => (
   <nav>
     <h3>Logo</h3>
     <ul className="nav-links">
-      <li>About</li>
-      <li>Shop</li>
+      <Link style={navStyle} to="/about">
+        <li>About</li>
+      </Link>
+      <Link style={navStyle} to="/shop">
+        <li>Shop</li>
+      </Link>
     </ul>
   </nav>
 );
