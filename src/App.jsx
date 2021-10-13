@@ -10,10 +10,11 @@ const App = () => {
     <Router>
       <div className="App">
         <Navigation />
-        {/* problem with / represented in all path routes */}
-        <Route path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/shop" component={Shop} />
+        <Switch>
+          <Route path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/shop" component={Shop} />
+        </Switch>
       </div>
     </Router>
   );
