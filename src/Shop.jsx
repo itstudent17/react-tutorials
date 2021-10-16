@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Shop = () => {
   const [items, setItems] = useState([]);
@@ -23,7 +24,9 @@ const Shop = () => {
     <div>
       <h1>Shop Page</h1>
       {items.map((i) => (
-        <h1 key={i.itemId}>{i.item.name}</h1>
+        <h1 key={i.itemId}>
+          <Link to={`/shop/${i.itemId}`}>{i.item.name}</Link>
+        </h1>
       ))}
     </div>
   );
